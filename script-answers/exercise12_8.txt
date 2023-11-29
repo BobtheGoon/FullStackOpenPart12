@@ -1,0 +1,93 @@
+Script started on 2023-11-29 16:01:33+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="145" LINES="22"]
+[?2004h]0;bob@pop-os: ~/Documents/Code/FullStackOpen/part12-containers-applications/todo-app/todo-backend[01;32mbob@pop-os[00m:[01;34m~/Documents/Code/FullStackOpen/part12-containers-applications/todo-app/todo-backend[00m$ exit[1Pndsudo apt upgrade htop [Kn[Kexitn[Khtop [12@sudo apt upgrade[Cend[Kxit[Kdocker exec -it todo-backend-mongo-1 bash
+[?2004l[?2004hroot@070cd96e1917:/# mongosh -u root p -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	656744697e30d3f842241661
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.2[0m
+Using MongoDB:		7.0.3
+[1m[33mUsing Mongosh[0m:		2.0.2
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-11-27T16:17:39.704+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         96.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse te[1G[0Jtest> use t[12Ghe_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find{}
+Uncaught:
+[1m[31mSyntaxError[0m: Missing semicolon. (1:13)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39mtodos[33m.[39mfind{}[0m
+[0m [90m   |[39m              [31m[1m^[22m[39m[0m
+[0m [90m 2 |[39m[0m
+
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.find{}[30G[1D[1G[0Jthe_database> db.todos.find[44m{[49m}[29G[1D[1G[0Jthe_database> db.todos.find{[44m}[49m[28G[1D[1G[0Jthe_database> db.todos.find{}[27G[1C[1G[0Jthe_database> db.todos.find{[44m}[49m[28G[1C[1G[0Jthe_database> db.todos.find[44m{[49m}[29G[1C[1G[0Jthe_database> db.todos.find{}[30G)[1D[1G[0Jthe_database> db.todos.find{})[30G[1D[1G[0Jthe_database> db.todos.find[44m{[49m})[29G[1D[1G[0Jthe_database> db.todos.find{[44m}[49m)[28G[1G[0Jthe_database> db.todos.find({[44m}[49m)[29G[1C[1G[0Jthe_database> db.todos.find([44m{[49m})[30G[1C[1G[0Jthe_database> db.todos.find[44m([49m{})[31G[1C[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId("6564c12257542519105b4e25"),
+    text: [32m'Updated text11'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("6564c12257542519105b4e26"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("6566110b5d32a934f9bb6a34"),
+    text: [32m'Testing post'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insert
+db.todos.insertMany  db.todos.insertOne
+
+[1G[0Jthe_database> db.todos.insert[30G
+db.todos.insertMany  db.todos.insertOne
+
+[1G[0Jthe_database> db.todos.insert[30GOne/[1G[0Jthe_database> db.todos.insertOne[33G({[1D[1G[0Jthe_database> db.todos.insertOne({[34G[1G[0Jthe_database> db.todos.insertOne(t{[35G[1G[0Jthe_database> db.todos.insertOne(to{[36G[1G[0Jthe_database> db.todos.insertOne(tod{[37G[1G[0Jthe_database> db.todos.insertOne(todo{[38G[1G[0Jthe_database> db.todos.insertOne(todo,{[39G[1G[0Jthe_database> db.todos.insertOne(todo, {[40G[1C[1G[0Jthe_database> db.todos.insertOne(todo, {[41G[1D[1G[0Jthe_database> db.todos.insertOne(todo, {[40G[1G[0Jthe_database> db.todos.insertOne(todo,{[39G[1G[0Jthe_database> db.todos.insertOne(todo{[38G[1G[0Jthe_database> db.todos.insertOne(tod{[37G[1G[0Jthe_database> db.todos.insertOne(to{[36G[1G[0Jthe_database> db.todos.insertOne(t{[35G[1G[0Jthe_database> db.todos.insertOne({[34G[1C[1G[0Jthe_database> db.todos.insertOne({[35Gte[1G[0Jthe_database> db.todos.insertOne({t[36G[1G[0Jthe_database> db.todos.insertOne({[35Gtext[33mtext[39m:[1D[1D[1D[1D[1D[1G[0Jthe_database> db.todos.insertOne({[32m"text:[39m[36G[1C[1C[1C[1C[1G[0Jthe_database> db.todos.insertOne({[32m"text"[39m:[41G[1C[32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, [32m"[39m[32md[39m[32mo[39m[32mn[39m[32me[39m[32m"[39m:fals[33mfalse[39m=[1G[0Jthe_database> db.todos.insertOne({[32m"text"[39m:[32m"Increase the number of tools in my toolbelt"[39m, [32m"done"[39m:[33mfalse[39m[101G})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("6567456b7e30d3f842241662")
+}
+[1G[0Jthe_database> [15Gd[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[32m"text"[39m:[32m"Increase the number of tools in my toolbelt"[39m, [32m"done"[39m:[33mfalse[39m})[103G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId("6564c12257542519105b4e25"),
+    text: [32m'Updated text11'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("6564c12257542519105b4e26"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("6566110b5d32a934f9bb6a34"),
+    text: [32m'Testing post'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6567456b7e30d3f842241662"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004hroot@070cd96e1917:/# exit
+[?2004lexit
+[?2004h]0;bob@pop-os: ~/Documents/Code/FullStackOpen/part12-containers-applications/todo-app/todo-backend[01;32mbob@pop-os[00m:[01;34m~/Documents/Code/FullStackOpen/part12-containers-applications/todo-app/todo-backend[00m$ exit
+[?2004lexit
+
+Script done on 2023-11-29 16:07:16+02:00 [COMMAND_EXIT_CODE="0"]
